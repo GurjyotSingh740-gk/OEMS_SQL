@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Event Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Event Manager</h1>
+        </div>
+    </header>
+    <section class="hero">
+        <h2>Manage Your Events Effortlessly</h2>
+        <p>Register, create, and manage events with ease.</p>
+        <button onclick="scrollToSection('events')">Get Started</button>
+    </section>
+<section class="add-event">
+    <h2>Add Your Event</h2>
+    <p>Want to add your own event? Fill out the form and submit it!</p>
+    <button onclick="location.href='create-event.html'">Add Event</button>
+</section>
+    <section id="events" class="events">
+        <h2>Upcoming Events</h2>
+        <div id="event-cards" class="event-cards">
+            <!-- Dynamic Event Cards will be inserted here by script.js -->
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>

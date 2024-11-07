@@ -1,0 +1,342 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: #333;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+.navbar h1 {
+    display: inline-block;
+    font-size: 1.8em;
+}
+
+.navbar nav {
+    float: right;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1em;
+}
+
+.hero {
+    background: #f7f7f7;
+    padding: 50px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.events {
+    padding: 20px;
+    text-align: center;
+}
+
+.events h2 {
+    margin-bottom: 20px;
+}
+
+.event-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Event Card Styling */
+.event-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px; /* Increased padding for bigger card */
+    width: 300px; /* Card width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.event-card h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    margin-bottom: 10px;
+}
+
+.event-card button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.event-card button:hover {
+    background: white;
+    color: black;
+    border: 1px solid #333;
+}
+
+/* Hover effect for the event card */
+.event-card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-cards {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center;
+    }
+
+    .event-card {
+        width: 100px; /* Make cards smaller on mobile */
+        margin-bottom: 20px;
+    }
+}
+/* Card container styling */
+#add-event .add-event form {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 2rem;
+}
+
+/* Form heading */
+#add-event h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Input and label styling */
+form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    text-align: left;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners for input fields */
+    margin-bottom: 1.25rem;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="number"]:focus {
+    border-color: #007bff; /* Focus color */
+    outline: none;
+}
+
+/* Submit button styling */
+form button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3; /* Hover color */
+}
+
+/* Styling for the "Add Your Event" section */
+.add-event {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f0f4f8;
+    text-align: center;
+}
+
+.add-event h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.add-event p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.add-event button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-event button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+/* Add a card-like container around the "Add Your Event" content */
+.add-event {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hidden-form {
+    display: none;
+}
+
+
+/* Update Event Section */
+.update-event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    background-color: #f0f4f8;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Update Form Styling */
+#update-form {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+}
+
+/* Fetch Event Button */
+#fetch-event {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1.25rem;
+}
+
+#fetch-event:hover {
+    background-color: #0056b3;
+}
+
+/* Update Event Button */
+#update-form button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1.25rem;
+}
+
+#update-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Delete Event Button */
+#delete-event {
+    padding: 8px 16px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff4d4d;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+    margin-top: 10px;
+}
+
+/* No hover effect for Delete Button */
+#delete-event:hover {
+    background-color: #ff4d4d;
+}
+/* Title Input Field Styling */
+#update-title {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners for input fields */
+    margin-bottom: 1.25rem;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus Effect for Title Input */
+#update-title:focus {
+    border-color: #007bff; /* Focus color */
+    outline: none;
+}

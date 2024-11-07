@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Event Manager</h1>
+        </div>
+    </header>
+    
+    <!-- Add Your Event Section -->
+<section id="add-event" class="add-event">
+    <h2>Add Your Event</h2>
+    <p>Submit your event details below and it will be added to our database.</p>
+    <form id="event-form">
+        <label for="event-title">Event Title:</label>
+        <input type="text" id="event-title" name="title" required>
+
+        <label for="event-date">Event Date:</label>
+        <input type="date" id="event-date" name="event_date" required>
+
+        <label for="event-location">Location:</label>
+        <input type="text" id="event-location" name="location" required>
+
+        <label for="event-capacity">Capacity:</label>
+        <input type="number" id="event-capacity" name="capacity" required>
+
+        <label for="event-description">Description:</label>
+            <textarea id="event-description" name="description" required></textarea>
+
+        <button type="submit">Submit Event</button>
+    </form>
+</section>
+
+<section id="update-event" class="update-event">
+    <h2>Update Event</h2>
+    <input type="text" id="event-title-to-delete" placeholder="Event Title" required>
+    <button id="fetch-event">Fetch Event</button>
+    <form id="update-form" class="hidden-form">
+        <label for="update-title">Event Title:</label>
+        <input type="text" id="update-title" name="title" placeholder="Enter event title" required>
+    
+        <label for="update-date">Event Date:</label>
+        <input type="date" id="update-date" name="event_date" required>
+    
+        <label for="update-location">Location:</label>
+        <input type="text" id="update-location" name="location" placeholder="Enter event location" required>
+    
+        <label for="update-capacity">Capacity:</label>
+        <input type="number" id="update-capacity" name="capacity" placeholder="Enter capacity" required>
+    
+        <label for="update-description">Description:</label>
+        <textarea id="update-description" name="description" placeholder="Enter event description" required></textarea>
+    
+        <button type="submit">Update Event</button>
+    </form>
+    
+    <button id="delete-event">Delete Event</button>
+</section>
+
+
+    <script src="create-event.js"></script>
+</body>
+</html>
